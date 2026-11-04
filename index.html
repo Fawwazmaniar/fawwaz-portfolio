@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <link rel="canonical" href="{{SITE_URL}}" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{TITLE}}" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:url" content="{{SITE_URL}}" />
+    <!-- TODO: add an og:image and twitter:image once you have a 1200x630 social card at /og.png -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{TITLE}}" />
+    <meta name="twitter:description" content="{{DESCRIPTION}}" />
+
+    <script type="application/ld+json">{{JSON_LD}}</script>
+
+    <!-- TEMPORARY: lets ?palette=<name> preview a palette. Remove with the palette previews in index.css. -->
+    <script>
+      var palette = new URLSearchParams(location.search).get('palette')
+      if (palette) document.documentElement.dataset.palette = palette
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

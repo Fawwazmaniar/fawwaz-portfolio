@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+/*
+ * Palette: three base colors (fill, ink, paper). Everything else is derived, so changing a
+ * palette means changing only --lime, --ink and --paper. Ink on the fill color is >= 7:1.
+ */
+:root {
+  --lime: #7fe876;
+  --ink: #262182;
+  --paper: #f6f7fb;
+
+  --ink-soft: color-mix(in srgb, var(--ink) 78%, var(--paper));
+  color-scheme: light;
+  --canvas: var(--paper);
+  --surface: color-mix(in srgb, var(--paper) 93%, var(--ink));
+  --fg: var(--ink);
+  --muted: color-mix(in srgb, var(--ink) 76%, var(--paper));
+  --line: color-mix(in srgb, var(--paper) 80%, var(--ink));
+  --rule: var(--ink);
+  --band: var(--ink);
+  --on-band: var(--paper);
+}
+
+/* Dark mode follows the visitor's system setting. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --canvas: var(--ink);
+    --surface: color-mix(in srgb, var(--ink) 92%, var(--paper));
+    --fg: var(--paper);
+    --muted: color-mix(in srgb, var(--paper) 68%, var(--ink));
+    --line: color-mix(in srgb, var(--ink) 80%, var(--paper));
+    --rule: var(--paper);
+    --band: var(--paper);
+    --on-band: var(--ink);
+  }
+}
+
+/* TEMPORARY palette previews: open the site with ?palette=<name>. Delete once you've chosen. */
+[data-palette='tangerine'] { --lime: #ff8a3d; --ink: #1c130c; --paper: #f8f1e6; }
+[data-palette='cornflower'] { --lime: #9db8ff; --ink: #10162b; --paper: #f2f4fa; }
+[data-palette='bubblegum'] { --lime: #ffa8d2; --ink: #1f0f18; --paper: #fbf2ee; }
+[data-palette='butter'] { --lime: #ffd84a; --ink: #1a1708; --paper: #f7f2e2; }
+[data-palette='lavender'] { --lime: #c7b8ff; --ink: #17122b; --paper: #f5f3fa; }
+[data-palette='mint'] { --lime: #a8ebc9; --ink: #0e1a14; --paper: #f0f5ef; }
+[data-palette='coral'] { --lime: #ff7a59; --ink: #1d100c; --paper: #faf0ea; }
+[data-palette='tomato'] { --lime: #ff5a36; --ink: #150d0b; --paper: #f8efe8; }
+[data-palette='peach'] { --lime: #ffb08a; --ink: #1e130d; --paper: #fbf1e8; }
+[data-palette='marigold'] { --lime: #ffb400; --ink: #1c1405; --paper: #f8f0dc; }
+[data-palette='clay'] { --lime: #e8936f; --ink: #1a100b; --paper: #f6ede4; }
+[data-palette='rose'] { --lime: #ff8fa3; --ink: #1f0e13; --paper: #fbf0f0; }
+[data-palette='aqua'] { --lime: #6fe0d0; --ink: #0b1a18; --paper: #eef6f4; }
+
+@theme inline {
+  --color-lime: var(--lime);
+  --color-ink: var(--ink);
+  --color-inksoft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-rule: var(--rule);
+  --color-band: var(--band);
+  --color-onband: var(--on-band);
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --animate-marquee: marquee 45s linear infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Content slides in from the sides, so never let it create a horizontal scrollbar. */
+    overflow-x: clip;
+    background: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 3px;
+  }
+}
+
+/* Focus rings must contrast with the block they sit on. */
+.lime-zone :focus-visible {
+  outline-color: var(--ink);
+}
+.band-zone :focus-visible {
+  outline-color: var(--on-band);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Scroll progress bar, driven by the browser's scroll timeline (no JS). Hidden where unsupported. */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  height: 3px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  animation: grow linear both;
+  animation-timeline: scroll(root);
+}
+
+/* Page-load entrance. Set --enter-x / --enter-y inline to choose the direction. */
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translate(var(--enter-x, 0), var(--enter-y, 0));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.enter {
+  animation: enter 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
