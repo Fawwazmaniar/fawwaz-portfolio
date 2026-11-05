@@ -3,7 +3,7 @@
 ## Links and files
 - [x] `person.github` set
 - [x] `person.linkedin` set from your resume
-- [ ] `site.url`, your real domain (`src/content.ts`): drives canonical, Open Graph, sitemap, robots, JSON-LD
+- [x] `site.url` set to https://www.fawwazmaniar.dev
 - [ ] `public/resume.pdf`: the "Download resume" button points here and 404s until it exists
 - [ ] A 1200x630 `public/og.png`, then add `og:image` / `twitter:image` and switch `twitter:card` to `summary_large_image` in `index.html`
 

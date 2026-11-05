@@ -5,8 +5,8 @@
 import type { Education, Job, NavItem, Project, SkillGroup } from './types.ts'
 
 export const site = {
-  // TODO: replace with your real domain once deployed (used for canonical, Open Graph, sitemap).
-  url: 'https://your-domain.example',
+  // Used for the canonical link, Open Graph, sitemap and structured data.
+  url: 'https://www.fawwazmaniar.dev',
   title: 'Mohammed Fawwaz Maniar | Senior Full Stack Engineer, Frontend Specialist',
   description:
     'Senior full stack engineer and frontend specialist in Markham, Ontario. Eight-plus years of Angular and TypeScript, now building in React. Open to senior front-end and full-stack roles.',
