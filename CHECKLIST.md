@@ -40,5 +40,4 @@ Filled in from the details you pasted. Still needed:
 | `index.html` | TODO for og:image |
 
 ## Also worth checking
-- [ ] Review the "~" metrics, which are yours to confirm
 - [ ] Run Lighthouse on the deployed site (not yet measured)

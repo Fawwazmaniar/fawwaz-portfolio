@@ -5,20 +5,12 @@ export interface NavItem {
   heading: { lead: string; accent: string }
 }
 
-/** A bullet reads as: text, metric, suffix. Only `text` is required. */
-export interface Bullet {
-  text: string
-  /** Estimated figure, written with "~". Delete it and the bullet still reads fine. */
-  metric?: string
-  suffix?: string
-}
-
 export interface Job {
   role: string
   company: string
   location: string
   period: string
-  bullets: Bullet[]
+  bullets: string[]
 }
 
 export interface SkillGroup {
@@ -64,6 +56,9 @@ export interface Project {
   stack: StackItem[]
   next: string[]
   learned: string[]
+  /** Optional: shown on the detail page only when present. */
+  keyDecisions?: string[]
+  tradeoffs?: string
 }
 
 export interface Education {

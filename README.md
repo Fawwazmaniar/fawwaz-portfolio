@@ -18,7 +18,7 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 
 - **Social links, domain, resume:** `person.github`, `person.linkedin`, `site.url`, and drop your PDF at `public/resume.pdf`.
 - **Empty means "coming soon":** an empty string or empty array renders a visible placeholder instead of a fake value.
-- **Metrics:** each experience bullet has an optional `metric` (the "~" figures). Edit or delete it in place.
+- **Numbers:** every figure on the site (the hero counters, "13,000+ users") is real and lives in `content.ts`. Don't add estimates.
 - **SEO:** the title, description, canonical URL, JSON-LD, `sitemap.xml` and `robots.txt` are generated from `content.ts` at build time (see `seo()` in `vite.config.ts`).
 
 ## Adding a project

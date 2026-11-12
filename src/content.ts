@@ -37,18 +37,16 @@ export const hero = {
   status: 'Open to senior front-end and full-stack roles',
   positioning: 'Senior front-end engineer. Angular and TypeScript depth, building in React.',
   intro:
-    'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 8+ years of experience, currently at Jonas Software.',
+    'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 9 years of experience, currently at Jonas Software.',
   facts: [
     { label: 'Depth', value: 'Angular and TypeScript' },
     { label: 'Building in', value: 'React and React Native' },
     { label: 'Backend and data', value: 'C# and SQL' },
   ],
-  // Facts from the experience section, not estimates.
   stats: [
-    { value: 8, suffix: '+', label: 'years of experience' },
-    { value: 5, suffix: '+', label: 'enterprise products' },
-    { value: 10000, suffix: '+', label: 'users served' },
-    { value: 3, suffix: '', label: 'legacy apps migrated' },
+    { value: 9, suffix: '+', label: 'Years of experience' },
+    { value: 13000, suffix: '+', label: 'Users on products I build' },
+    { value: 2, suffix: '', label: 'Apps built this year (Plateau, Aethr)' },
   ],
 }
 
@@ -114,7 +112,6 @@ export const skills: SkillGroup[] = [
   },
 ]
 
-// The "~" figures are my own estimates. Edit or delete any `metric` freely.
 export const experience: Job[] = [
   {
     role: 'Senior Front End Engineer',
@@ -122,35 +119,13 @@ export const experience: Job[] = [
     location: 'Markham, ON',
     period: 'Sept 2019 to present',
     bullets: [
-      {
-        text: 'Owned features end to end across 5+ enterprise business intelligence products serving 10,000+ users, from requirements and design through testing, release, and production support',
-      },
-      {
-        text: 'Led migration of 3 legacy applications to modern Angular with NgRx and OnPush change detection',
-        metric: '~40% faster load times',
-      },
-      {
-        text: 'Optimized SQL queries (SQL Server, PostgreSQL) behind reporting dashboards',
-        metric: '~50% faster average execution on millions of rows',
-      },
-      { text: 'Built data-heavy interfaces: dashboards and multi-step workflows over large datasets' },
-      {
-        text: 'Set testing and delivery standards: automated testing gates, Git branching strategy, CI/CD practices',
-        metric: '~35% fewer integration failures',
-      },
-      {
-        text: 'Mentored 4 junior and intermediate developers through code reviews focused on readability, testability, and maintainability',
-        metric: '~20% shorter review cycles',
-      },
-      {
-        text: 'Used GitHub Copilot and Claude daily for scaffolding, test generation, and debugging',
-        metric: '~30% less repetitive coding work',
-        suffix: 'with all AI-generated code reviewed and owned by me',
-      },
-      {
-        text: 'Partnered with product owners on requirements and technical risk; ran sprint planning and retrospectives for a team of 6',
-        metric: '~15% sprint velocity improvement over two years',
-      },
+      'Drove projects from technical planning to release across multiple enterprise business intelligence products used by 13,000+ users, including production support after launch.',
+      'Built data-rich interfaces for reporting and analytics, including dashboards and multi-step workflows over large datasets, turning complex data into screens people can act on.',
+      'Led migration of legacy applications to modern Angular with NgRx and OnPush change detection, improving load performance and the developer experience for the team.',
+      'Partnered as a technical peer with product owners, clarifying requirements, reworking technical specs, and flagging risks early so solutions matched what customers needed.',
+      'Made testing a team standard: automated testing gates, Git branching strategies, and CI/CD practices that catch integration issues early.',
+      'Use GitHub Copilot and Claude daily to scaffold components, generate tests, and debug, while reviewing and owning all AI-generated code.',
+      'Led Agile ceremonies (sprint planning, estimation, retrospectives) for the team, keeping delivery predictable and blockers visible.',
     ],
   },
   {
@@ -159,11 +134,9 @@ export const experience: Job[] = [
     location: 'Toronto, ON',
     period: 'Sept 2017 to Sept 2019',
     bullets: [
-      {
-        text: 'Drove an 80% increase in e-commerce revenue by working with marketing on SEO strategy and UI improvements across 6 global e-commerce websites',
-      },
-      { text: 'Built client management applications with TypeScript and Bootstrap, with cross-browser compatibility' },
-      { text: 'Maintained and optimized 6 production e-commerce sites, including PayPal payment integration' },
+      "Collaborated with marketing on SEO strategy and UI improvements across the company's global e-commerce websites.",
+      'Built client management applications with TypeScript and Bootstrap, ensuring cross-browser compatibility.',
+      'Maintained and optimized production e-commerce sites, ensuring high availability and seamless PayPal payment integration.',
     ],
   },
 ]
