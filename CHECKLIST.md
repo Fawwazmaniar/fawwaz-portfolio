@@ -2,7 +2,7 @@
 
 ## Links and files
 - [x] `person.github` set
-- [x] `person.linkedin` set from your resume
+- [x] `person.linkedin` set to the corrected profile URL (the old `/in/fawwaz-maniar-…` address now 404s)
 - [x] `site.url` set to https://www.fawwazmaniar.dev
 - [x] `public/resume.pdf` added (phone number removed; the original is untouched in your Downloads)
 - [x] `public/og.png` text-only social card (regenerate with `npm run og`)

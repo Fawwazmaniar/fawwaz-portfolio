@@ -20,7 +20,7 @@ export const person = {
   email: 'fawwazmaniar@gmail.com',
   // An empty profile URL renders as "coming soon".
   github: 'https://github.com/Fawwazmaniar',
-  linkedin: 'https://www.linkedin.com/in/fawwaz-maniar-899a2aa6/',
+  linkedin: 'https://www.linkedin.com/in/mohammed-fawwaz-maniar-899a2aa6/',
   resumeUrl: '/resume.pdf', // the file lives at public/resume.pdf
   resumeFilename: 'Mohammed-Fawwaz-Maniar-Resume.pdf', // name the visitor's download gets
 }
