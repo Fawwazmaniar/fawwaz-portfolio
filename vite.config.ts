@@ -2,7 +2,23 @@ import { defineConfig } from 'vitest/config'
 import type { Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { person, projects, site } from './src/content.ts'
+import { hero, person, projects, site } from './src/content.ts'
+
+const escapeHtml = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+/**
+ * Plain-HTML copy of the hero for crawlers and visitors without JavaScript. The page itself is
+ * rendered by React, so without this the HTML the server sends would be an empty shell.
+ */
+const noscript = `<noscript>
+      <h1>${escapeHtml(person.name)}</h1>
+      <p>${escapeHtml(person.jobTitle)} · ${escapeHtml(person.location)}</p>
+      <p>${escapeHtml(hero.intro)}</p>
+      <ul>
+        ${hero.stats.map((s) => `<li>${s.value.toLocaleString('en-US')}${s.suffix} ${escapeHtml(s.label)}</li>`).join('\n        ')}
+      </ul>
+      <p><a href="${person.resumeUrl}">Download resume</a> · <a href="mailto:${person.email}">${escapeHtml(person.email)}</a></p>
+    </noscript>`
 
 /**
  * Fills the {{TOKENS}} in index.html and emits sitemap.xml and robots.txt,
@@ -27,6 +43,7 @@ function seo(): Plugin {
     DESCRIPTION: site.description,
     SITE_URL: site.url,
     JSON_LD: jsonLd,
+    NOSCRIPT: noscript,
   }
 
   return {
