@@ -20,6 +20,7 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 - **Social links, domain, resume:** `person.github`, `person.linkedin`, `site.url`, and drop your PDF at `public/resume.pdf`.
 - **Empty means "coming soon":** an empty string or empty array renders a visible placeholder instead of a fake value.
 - **Numbers:** every figure on the site (the hero counters, "13,000+ users") is real and lives in `content.ts`. Don't add estimates.
+- **Social card:** `public/og.png` is a text-only 1200×630 image used only in link previews (LinkedIn, Slack, X). Regenerate it with `npm run og` after changing your name, title or colours.
 - **SEO:** the title, description, canonical URL, JSON-LD, `sitemap.xml` and `robots.txt` are generated from `content.ts` at build time (see `seo()` in `vite.config.ts`).
 
 ## Adding a project

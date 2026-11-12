@@ -5,7 +5,7 @@
 - [x] `person.linkedin` set from your resume
 - [x] `site.url` set to https://www.fawwazmaniar.dev
 - [ ] `public/resume.pdf`: the "Download resume" button points here and 404s until it exists
-- [ ] A 1200x630 `public/og.png`, then add `og:image` / `twitter:image` and switch `twitter:card` to `summary_large_image` in `index.html`
+- [x] `public/og.png` text-only social card (regenerate with `npm run og`)
 
 ## Plateau (`projects[0]`)
 Stack, key decisions, trade-offs and "what I learned" now come from the repo's `package.json` and README.
@@ -31,7 +31,6 @@ Filled in from the details you pasted. Still needed:
 | `project.diagram` empty | "Diagram coming soon" on the card |
 | Empty detail sections | "Coming soon" |
 | Aethr stack empty | "Stack details coming soon" on the card |
-| `index.html` | TODO for og:image |
 
 ## Also worth checking
 - [ ] Run Lighthouse on the deployed site (not yet measured)
