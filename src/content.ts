@@ -152,14 +152,6 @@ export const projects: Project[] = [
       'Build your own training split, log every set with weight, reps and warm-up flags, add per-exercise notes, and review your full session history.',
     liveUrl: 'https://workout-tracker-zeta-neon.vercel.app',
     repoUrl: 'https://github.com/Fawwazmaniar/workout-tracker',
-    screenshots: [
-      {
-        src: '/screenshots/plateau-1.png',
-        alt: "Plateau's welcome screen: a dark card with the Plateau logo, the headline \"Train with intent\", and Create account and Log in buttons.",
-        width: 974,
-        height: 1006,
-      },
-    ],
     diagram: [
       { label: 'Client', nodes: ['React', 'TypeScript'] },
       { label: 'Backend', nodes: ['Supabase'] },
@@ -206,15 +198,6 @@ export const projects: Project[] = [
       'Connects people with providers of tarot, astrology and similar practices. A consumer app for discovering and booking sessions, and a provider app for managing availability, bookings and client communication.',
     liveUrl: 'https://intotheaethr.com/',
     repoUrl: '', // TODO: add the repo link if it is public
-    screenshots: [
-      {
-        src: '/screenshots/aethr-1.png',
-        alt: 'Two phones showing the Aethr app\'s Your Appointments screen: a booking card for a tarot reader with a Go to link button, and a calendar of appointments.',
-        width: 814,
-        height: 798,
-      },
-      // TODO: add more screenshots, e.g. discovery, booking and the video session
-    ],
     // TODO: check this matches how Aethr is actually wired together.
     diagram: [
       { label: 'React Native', nodes: ['Consumer app', 'Provider app'] },

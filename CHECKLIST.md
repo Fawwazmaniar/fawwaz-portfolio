@@ -19,7 +19,6 @@ Filled in from the details you pasted. Still needed:
 - [ ] Check the card `diagram`: the arrows imply both apps use auth and the services, which I assumed
 - [x] `liveUrl` set to intotheaethr.com
 - [ ] `repoUrl` (if public)
-- [ ] More Aethr `screenshots` (one added: the appointments screens). Add discovery, booking and the video session
 - [ ] `stack[].role`: restates what each tool does in the app. Rewrite as your reasons for choosing it
 - [ ] `next` and `learned`: empty, show "Coming soon"
 - [ ] Confirm the `problem` wording and the status line "In testing on TestFlight and Play Store"
@@ -29,7 +28,6 @@ Filled in from the details you pasted. Still needed:
 |---|---|
 | `person.github`, `person.linkedin` empty | "GitHub (coming soon)" / "LinkedIn (coming soon)" |
 | `project.liveUrl` / `repoUrl` empty | "Live site link coming soon" |
-| `project.screenshots` empty | dashed "Screenshots coming soon" box on the detail page (no project hits this now) |
 | `project.diagram` empty | "Diagram coming soon" on the card |
 | Empty detail sections | "Coming soon" |
 | Aethr stack empty | "Stack details coming soon" on the card |

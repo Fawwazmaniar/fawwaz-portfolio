@@ -24,14 +24,6 @@ export interface StackItem {
   role: string
 }
 
-export interface Screenshot {
-  src: string
-  alt: string
-  /** Intrinsic size in pixels. Lets the browser reserve space, so the page doesn't jump while loading. */
-  width: number
-  height: number
-}
-
 /** One left-to-right stage of a project's architecture diagram. */
 export interface DiagramColumn {
   label: string
@@ -47,7 +39,6 @@ export interface Project {
   /** Leave empty until the link exists; the page shows a "coming soon" state. */
   liveUrl: string
   repoUrl: string
-  screenshots: Screenshot[]
   /** Architecture diagram shown on the card, left to right. Empty shows "Diagram coming soon". */
   diagram: DiagramColumn[]
   /** Detail view sections. Empty means "coming soon". */

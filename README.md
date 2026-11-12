@@ -25,9 +25,8 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 ## Adding a project
 
 1. Add an object to the `projects` array in `src/content.ts` (copy `plateau`). The `slug` becomes the URL: `/projects/<slug>`.
-2. Put screenshots in `public/screenshots/` and list them: `{ src: '/screenshots/foo.png', alt: 'What the image shows', width: 1200, height: 800 }`.
-3. Describe the architecture as left-to-right stages: `diagram: [{ label: 'Client', nodes: ['React'] }, ...]`. Leave it empty to show "Diagram coming soon".
-4. That's it. The card, detail page and sitemap entry are generated.
+2. Describe the architecture as left-to-right stages: `diagram: [{ label: 'Client', nodes: ['React'] }, ...]`. Leave it empty to show "Diagram coming soon".
+3. That's it. The card, detail page and sitemap entry are generated.
 
 ## Deploying to Vercel
 
@@ -44,4 +43,4 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 - **Type:** Inter (variable, weight up to 900) and Instrument Serif italic, both self-hosted via Fontsource.
 - **Motion:** hero fade-up, scroll reveals, count-up stats, a scrolling tech ticker (with a pause button), and a scroll progress bar. No animation library. All of it is off under `prefers-reduced-motion`.
 - **Why Tailwind:** styling stays next to the markup, and unused CSS is dropped (about 6 kB gzipped here).
-- **Project cards:** each card shows an architecture diagram (`diagram` in `content.ts`) on a lime panel. Screenshots live on the detail pages, recolored to a green duotone with CSS so any screenshot fits the palette.
+- **Project cards:** each card shows an architecture diagram (`diagram` in `content.ts`) on a lime panel. The site deliberately has no screenshots or photos; it stays text and type.
