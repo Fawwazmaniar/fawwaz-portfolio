@@ -7,6 +7,7 @@ React + TypeScript + Vite + Tailwind CSS v4. Static site, deployable to Vercel.
 ```bash
 npm install
 npm run dev          # http://localhost:5173
+npm run lint         # ESLint
 npm test             # unit/component tests (Vitest + React Testing Library)
 npm run test:e2e     # Playwright smoke test (first run: npx playwright install chromium)
 npm run build        # type-check + production build into dist/
