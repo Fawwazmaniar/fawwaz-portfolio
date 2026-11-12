@@ -108,6 +108,18 @@ export function ProjectDetail() {
           </dl>
         </DetailSection>
 
+        {project.keyDecisions && (
+          <DetailSection from="right" title="Key decisions" empty={false}>
+            <ul className={bullets}>{project.keyDecisions.map((line) => <li key={line}>{line}</li>)}</ul>
+          </DetailSection>
+        )}
+
+        {project.tradeoffs && (
+          <DetailSection from="left" title="Trade-offs" empty={false}>
+            <p className="text-lg leading-relaxed">{project.tradeoffs}</p>
+          </DetailSection>
+        )}
+
         <DetailSection from="right" title="What I would do next" empty={project.next.length === 0}>
           <ul className={bullets}>{project.next.map((line) => <li key={line}>{line}</li>)}</ul>
         </DetailSection>

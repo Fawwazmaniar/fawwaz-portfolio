@@ -8,15 +8,11 @@
 - [ ] A 1200x630 `public/og.png`, then add `og:image` / `twitter:image` and switch `twitter:card` to `summary_large_image` in `index.html`
 
 ## Plateau (`projects[0]`)
+Stack, key decisions, trade-offs and "what I learned" now come from the repo's `package.json` and README.
+- [x] `liveUrl` and `repoUrl` set
 - [ ] Check the card `diagram` matches how Plateau is wired (React, Supabase, Postgres with Row Level Security)
-- [x] `liveUrl` set
-- [ ] `repoUrl`
-- [ ] More Plateau `screenshots` (one added: the welcome screen). Add logging a set and session history
-- [ ] `stack[].role`: I wrote short descriptions of each tool's job. Replace with your real reasons for choosing it
-- [ ] `next`: has charts and personal records (from your brief). Add more
-- [ ] `learned`: one line from the brief; add more
-- [ ] Confirm Zustand and React Hook Form are in use. They come from your original brief, and your latest description doesn't list them
-- [ ] Confirm the `problem` and `approach` wording. They restate your descriptions
+- [ ] `next`: has charts and personal records (from your first brief). Add more
+- [ ] Confirm "warm-up flags" in the summary: your description has it, the README doesn't mention it
 
 ## Aethr (`projects[1]`)
 Filled in from the details you pasted. Still needed:

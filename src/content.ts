@@ -151,7 +151,7 @@ export const projects: Project[] = [
     summary:
       'Build your own training split, log every set with weight, reps and warm-up flags, add per-exercise notes, and review your full session history.',
     liveUrl: 'https://workout-tracker-zeta-neon.vercel.app',
-    repoUrl: '', // TODO: add the repo link
+    repoUrl: 'https://github.com/Fawwazmaniar/workout-tracker',
     screenshots: [
       {
         src: '/screenshots/plateau-1.png',
@@ -159,9 +159,7 @@ export const projects: Project[] = [
         width: 974,
         height: 1006,
       },
-      // TODO: add more screenshots, e.g. logging a set and session history
     ],
-    // TODO: check this matches how Plateau is actually wired together.
     diagram: [
       { label: 'Client', nodes: ['React', 'TypeScript'] },
       { label: 'Backend', nodes: ['Supabase'] },
@@ -174,20 +172,30 @@ export const projects: Project[] = [
       'Log every set with weight, reps and warm-up flags, and add notes per exercise.',
       'Review your full session history.',
       'All data access is enforced by Postgres Row Level Security.',
-      'Write tests alongside each feature, so the project doubles as practice for my testing habits.',
     ],
-    // TODO: the "role" text is my short description of each tool's job here. Rewrite it as your actual reasons for choosing it.
+    // Matches the repo's package.json and README.
     stack: [
       { name: 'React', role: 'UI components' },
-      { name: 'TypeScript', role: 'Typed models for workouts, sets and records' },
-      { name: 'Supabase', role: 'Backend and Postgres database, with Row Level Security enforcing all data access' },
-      { name: 'Zustand', role: 'Client-side state' },
-      { name: 'React Hook Form', role: 'Workout entry forms' },
-      { name: 'React Testing Library', role: 'Component tests written alongside features' },
-      { name: 'Vite', role: 'Dev server and build tooling' },
+      { name: 'TypeScript', role: 'Static typing' },
+      { name: 'Vite', role: 'Build tool and dev server' },
+      { name: 'React Router', role: 'Client-side routing' },
+      { name: 'Zustand', role: 'State the app controls: the auth session, current role and in-progress form selections' },
+      { name: 'TanStack Query', role: 'Server state, caching and mutations' },
+      { name: 'Supabase', role: 'Postgres database, Auth and Row Level Security' },
+      { name: 'Radix UI', role: 'Accessible, unstyled dialog primitives for all modals' },
+      { name: 'React Icons', role: 'Icons' },
     ],
+    keyDecisions: [
+      "Server state lives in TanStack Query and app-controlled state in Zustand, so caching and UI state don't get tangled.",
+      'Supabase Row Level Security enforces that users can only read and write their own data, so the client never decides ownership.',
+      'A workout is saved only when the user taps "Finish", so half-finished sessions never end up in history.',
+    ],
+    tradeoffs:
+      'Multi-step writes are not yet wrapped in a transaction, exercise reordering is deferred, and it ships as a PWA rather than a native app.',
     next: ['Track progress over time with charts, and highlight personal records.'], // TODO: add more
-    learned: ['Practising writing tests alongside features, rather than after them.'], // TODO: add more
+    learned: [
+      'Separating server state (React Query) from app-controlled state (Zustand), and enforcing data ownership in the database with Row Level Security instead of in client code.',
+    ],
   },
   {
     slug: 'aethr',
