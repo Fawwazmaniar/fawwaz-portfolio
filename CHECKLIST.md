@@ -4,7 +4,7 @@
 - [x] `person.github` set
 - [x] `person.linkedin` set from your resume
 - [x] `site.url` set to https://www.fawwazmaniar.dev
-- [ ] `public/resume.pdf`: the "Download resume" button points here and 404s until it exists
+- [x] `public/resume.pdf` added (phone number removed; the original is untouched in your Downloads)
 - [x] `public/og.png` text-only social card (regenerate with `npm run og`)
 
 ## Plateau (`projects[0]`)

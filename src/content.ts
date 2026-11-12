@@ -21,7 +21,7 @@ export const person = {
   // An empty profile URL renders as "coming soon".
   github: 'https://github.com/Fawwazmaniar',
   linkedin: 'https://www.linkedin.com/in/fawwaz-maniar-899a2aa6/',
-  resumeUrl: '/resume.pdf', // TODO: add your PDF at public/resume.pdf
+  resumeUrl: '/resume.pdf', // the file lives at public/resume.pdf
   resumeFilename: 'Mohammed-Fawwaz-Maniar-Resume.pdf', // name the visitor's download gets
 }
 
