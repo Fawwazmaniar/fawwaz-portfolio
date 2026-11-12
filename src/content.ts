@@ -9,7 +9,7 @@ export const site = {
   url: 'https://www.fawwazmaniar.dev',
   title: 'Mohammed Fawwaz Maniar | Senior Front End Developer',
   description:
-    'Senior front end developer in Markham, Ontario. 9 years of web development, deep in Angular and TypeScript, building in React. Open to senior front-end and full-stack roles.',
+    'Senior front end developer in Markham, Ontario. 9 years of software development in React, TypeScript and Angular, building data-rich enterprise products used by 13,000+ users. Open to senior front-end and full-stack roles.',
 }
 
 export const person = {
@@ -36,18 +36,18 @@ export const nav: NavItem[] = [
 
 export const hero = {
   status: 'Open to senior front-end and full-stack roles',
-  positioning: 'Senior front end developer. Angular and TypeScript depth, building in React.',
+  positioning: 'Senior front end developer working in React, TypeScript and Angular.',
   intro:
     'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 9 years of experience, currently at Jonas Software.',
   facts: [
     { label: 'Depth', value: 'Angular and TypeScript' },
-    { label: 'Building in', value: 'React and React Native' },
+    { label: 'Working in', value: 'React and React Native' },
     { label: 'Backend & Data', value: 'C# and SQL' },
   ],
   stats: [
     { value: 9, suffix: '+', label: 'Years of experience' },
     { value: 13000, suffix: '+', label: 'Users on products I build' },
-    { value: 2, suffix: '', label: 'Apps built this year (Plateau, Aethr)' },
+    { value: 3, suffix: '', label: 'Legacy apps modernized' },
   ],
 }
 
@@ -68,7 +68,7 @@ export const ticker = [
 ]
 
 export const about = [
-  'I am a senior front end developer in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
+  'I am a senior front end developer in Markham, Ontario. At Jonas Software I build data-rich interfaces for enterprise business intelligence products used by 13,000+ users, support four product teams, and lead migrations from legacy applications to modern stacks. I work in React, TypeScript and Angular: Angular and NgRx in production, React prototypes and proofs of concept at work, and React apps of my own, including Plateau and Aethr.',
   'I take ownership of a feature from requirements through release and production support. I lead migrations from legacy applications to modern stacks, and I mentor junior and intermediate developers through code review. I care about readable, maintainable code and I write tests alongside it.',
   'I use GitHub Copilot and Claude every day for scaffolding, test generation, debugging, and code review. I review everything they produce, and I own what ships.',
 ]
@@ -77,7 +77,7 @@ export const about = [
 export const skills: SkillGroup[] = [
   {
     title: 'Frontend',
-    note: 'Angular is my professional depth. My React experience comes from personal projects.',
+    note: 'React, TypeScript and Angular, from enterprise BI products to apps I build myself.',
     items: [
       'React (Hooks, React Router, React Native)',
       'TypeScript',
@@ -121,15 +121,15 @@ export const experience: Job[] = [
     role: 'Senior Front End Developer',
     company: 'Jonas Software',
     location: 'Markham, ON',
-    period: 'Sept 2019 to present',
+    period: 'Sept 2019 to Present',
     bullets: [
-      'Drove projects from technical planning to release across multiple enterprise business intelligence products used by 13,000+ users, including production support after launch.',
-      'Built data-rich interfaces for reporting and analytics, including dashboards and multi-step workflows over large datasets, turning complex data into screens people can act on.',
-      'Led migration of legacy applications to modern Angular with NgRx and OnPush change detection, improving load performance and the developer experience for the team.',
-      'Partnered as a technical peer with product owners, clarifying requirements, reworking technical specs, and flagging risks early so solutions matched what customers needed.',
-      'Made testing a team standard: automated testing gates, Git branching strategies, and CI/CD practices that catch integration issues early.',
-      'Use GitHub Copilot and Claude daily to scaffold components, generate tests, and debug, while reviewing and owning all AI-generated code.',
-      'Led Agile ceremonies (sprint planning, estimation, retrospectives) for the team, keeping delivery predictable and blockers visible.',
+      'Support 4 teams, each building a different enterprise business intelligence product, driving work from technical planning to release and production support for 13,000+ users.',
+      'Lead legacy-to-modern migrations (3 applications to date), including a vanilla JavaScript business intelligence app moved to Angular with NgRx and OnPush.',
+      'Cut client portal wait times by modernizing data flows: ~85% faster work-order refresh, ~70% faster invoice inquiries (300 per-row checks collapsed into one paged call), and ~75% faster page navigation.',
+      'Build data-rich reporting and analytics interfaces, including dashboards and multi-step workflows over large datasets.',
+      'Build React prototypes and proofs of concept, and evaluate React against Angular in migration planning, comparing component architecture, state management, and performance.',
+      'Mentor junior developers through code reviews focused on readability, testability, and maintainability.',
+      'Partner with product owners to clarify requirements, rework technical specs, and flag risks early.',
     ],
   },
   {
@@ -138,9 +138,8 @@ export const experience: Job[] = [
     location: 'Toronto, ON',
     period: 'Sept 2017 to Sept 2019',
     bullets: [
-      "Collaborated with marketing on SEO strategy and UI improvements across the company's global e-commerce websites.",
       'Built client management applications with TypeScript and Bootstrap, ensuring cross-browser compatibility.',
-      'Maintained and optimized production e-commerce sites, ensuring high availability and seamless PayPal payment integration.',
+      'Maintained and optimized production e-commerce sites with PayPal payment integration, and partnered with marketing on SEO and UI improvements.',
     ],
   },
 ]
@@ -150,7 +149,7 @@ export const projects: Project[] = [
     slug: 'plateau',
     name: 'Plateau',
     tagline: 'A workout tracker for lifters running a structured program.',
-    status: 'In progress',
+    status: 'Live',
     summary:
       'Build your own training split, log every set with weight, reps and warm-up flags, add per-exercise notes, and review your full session history.',
     liveUrl: 'https://workout-tracker-zeta-neon.vercel.app',
@@ -243,13 +242,11 @@ export const education: Education[] = [
   {
     title: 'BSc Computer Science',
     school: 'Trent University, Oshawa',
-    period: '2021 to 2023',
     note: "Dean's Honour Roll",
   },
   {
     title: 'Advanced Diploma, Computer Programming and Analysis',
     school: 'Seneca College, Toronto',
-    period: '2012 to 2016',
   },
 ]
 

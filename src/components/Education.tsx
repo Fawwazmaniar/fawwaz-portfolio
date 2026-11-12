@@ -10,18 +10,13 @@ export function Education() {
       <ul>
         {education.map((item, i) => (
           <li key={item.title}>
-            <Reveal
-              from={i % 2 ? 'right' : 'left'}
-              className="grid gap-2 border-t-2 border-rule py-6 md:grid-cols-[14rem_1fr] md:gap-12"
-            >
-              <p className={eyebrow}>{item.period}</p>
-              <div>
-                <h3 className="text-2xl font-bold tracking-tight">{item.title}</h3>
-                <p className="text-muted">
-                  {item.school}
-                  {item.note && ` · ${item.note}`}
-                </p>
-              </div>
+            {/* Indented to line up with the content column used by the other sections. */}
+            <Reveal from={i % 2 ? 'right' : 'left'} className="border-t-2 border-rule py-6 md:pl-[17rem]">
+              <h3 className="text-2xl font-bold tracking-tight">{item.title}</h3>
+              <p className="text-muted">
+                {item.school}
+                {item.note && ` · ${item.note}`}
+              </p>
             </Reveal>
           </li>
         ))}

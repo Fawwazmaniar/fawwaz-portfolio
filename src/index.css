@@ -15,7 +15,7 @@
   --surface: color-mix(in srgb, var(--paper) 93%, var(--ink));
   --fg: var(--ink);
   --muted: color-mix(in srgb, var(--ink) 76%, var(--paper));
-  --line: color-mix(in srgb, var(--paper) 80%, var(--ink));
+  --line: color-mix(in srgb, var(--ink) 21%, var(--paper));
   --rule: var(--ink);
   --band: var(--ink);
   --on-band: var(--paper);
@@ -29,7 +29,7 @@
     --surface: color-mix(in srgb, var(--ink) 92%, var(--paper));
     --fg: var(--paper);
     --muted: color-mix(in srgb, var(--paper) 68%, var(--ink));
-    --line: color-mix(in srgb, var(--ink) 80%, var(--paper));
+    --line: color-mix(in srgb, var(--paper) 21%, var(--ink));
     --rule: var(--paper);
     --band: var(--paper);
     --on-band: var(--ink);
@@ -98,7 +98,7 @@
 
 @keyframes marquee {
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 2)); /* half the track: two identical rows */
   }
 }
 
@@ -116,7 +116,7 @@
   height: 3px;
   background: var(--ink);
   transform: scaleX(0);
-  transform-origin: 0 50%;
+  transform-origin: left center;
   animation: grow linear both;
   animation-timeline: scroll(root);
 }
