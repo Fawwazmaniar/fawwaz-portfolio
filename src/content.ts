@@ -7,15 +7,15 @@ import type { Education, Job, NavItem, Project, SkillGroup } from './types.ts'
 export const site = {
   // Used for the canonical link, Open Graph, sitemap and structured data.
   url: 'https://www.fawwazmaniar.dev',
-  title: 'Mohammed Fawwaz Maniar | Senior Frontend Engineer',
+  title: 'Mohammed Fawwaz Maniar | Senior Front End Developer',
   description:
-    'Senior frontend engineer in Markham, Ontario. 9 years of web development, deep in Angular and TypeScript, building in React. Open to senior front-end and full-stack roles.',
+    'Senior front end developer in Markham, Ontario. 9 years of web development, deep in Angular and TypeScript, building in React. Open to senior front-end and full-stack roles.',
 }
 
 export const person = {
   name: 'Mohammed Fawwaz Maniar',
   brand: 'Fawwaz.',
-  jobTitle: 'Senior Frontend Engineer',
+  jobTitle: 'Senior Front End Developer',
   location: 'Markham, Ontario, Canada',
   email: 'fawwazmaniar@gmail.com',
   // An empty profile URL renders as "coming soon".
@@ -36,13 +36,13 @@ export const nav: NavItem[] = [
 
 export const hero = {
   status: 'Open to senior front-end and full-stack roles',
-  positioning: 'Senior front-end engineer. Angular and TypeScript depth, building in React.',
+  positioning: 'Senior front end developer. Angular and TypeScript depth, building in React.',
   intro:
     'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 9 years of experience, currently at Jonas Software.',
   facts: [
     { label: 'Depth', value: 'Angular and TypeScript' },
     { label: 'Building in', value: 'React and React Native' },
-    { label: 'Backend and data', value: 'C# and SQL' },
+    { label: 'Backend & Data', value: 'C# and SQL' },
   ],
   stats: [
     { value: 9, suffix: '+', label: 'Years of experience' },
@@ -68,54 +68,57 @@ export const ticker = [
 ]
 
 export const about = [
-  'I am a senior frontend engineer in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
+  'I am a senior front end developer in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
   'I take ownership of a feature from requirements through release and production support. I lead migrations from legacy applications to modern stacks, and I mentor junior and intermediate developers through code review. I care about readable, maintainable code and I write tests alongside it.',
   'I use GitHub Copilot and Claude every day for scaffolding, test generation, debugging, and code review. I review everything they produce, and I own what ships.',
 ]
 
+// Mirrors the skills section of the resume, in the same order and wording.
 export const skills: SkillGroup[] = [
   {
     title: 'Frontend',
     note: 'Angular is my professional depth. My React experience comes from personal projects.',
     items: [
+      'React (Hooks, React Router, React Native)',
       'TypeScript',
       'JavaScript (ES6+)',
-      'React (Hooks, React Router, React Hook Form)',
       'Angular (NgRx, RxJS, OnPush, lazy loading)',
       'HTML5',
       'CSS3',
-      'Bootstrap',
-      'Responsive and mobile-first design',
+      'Responsive design',
     ],
   },
   {
-    title: 'State and data fetching',
-    items: ['Zustand', 'TanStack Query (React Query)', 'NgRx', 'RxJS', 'REST API integration'],
+    title: 'State & Data',
+    items: ['Zustand', 'TanStack Query (React Query)', 'NgRx', 'RxJS', 'Supabase', 'REST API integration'],
   },
   {
-    title: 'Testing and delivery',
-    items: ['React Testing Library', 'Automated testing', 'CI/CD', 'GitHub Actions', 'Git', 'Code review'],
-  },
-  {
-    title: 'Backend and data',
-    items: ['Node.js', 'C# / .NET Core', 'RESTful APIs', 'SQL (authoring and optimization)', 'SQL Server', 'PostgreSQL'],
-  },
-  {
-    title: 'AI-assisted development',
+    title: 'Testing & Delivery',
     items: [
-      'GitHub Copilot',
-      'Claude (agentic workflows, code generation, test scaffolding, debugging, code review)',
+      'Vitest',
+      'React Testing Library',
+      'Unit and integration testing',
+      'CI/CD pipelines',
+      'GitHub Actions',
+      'Git',
+      'Code review',
+      'Agile/Scrum',
     ],
   },
   {
-    title: 'Ways of working',
-    items: ['Agile/Scrum', 'Requirements analysis', 'Cross-functional collaboration', 'Mentorship'],
+    title: 'Backend & Data',
+    items: ['Node.js', 'C# / .NET Core', 'RESTful APIs', 'SQL (authoring & optimization)', 'SQL Server', 'PostgreSQL'],
+  },
+  {
+    title: 'AI-Assisted Development',
+    note: 'Agentic workflows, test scaffolding, debugging, code review.',
+    items: ['Claude', 'GitHub Copilot'],
   },
 ]
 
 export const experience: Job[] = [
   {
-    role: 'Senior Front End Engineer',
+    role: 'Senior Front End Developer',
     company: 'Jonas Software',
     location: 'Markham, ON',
     period: 'Sept 2019 to present',
@@ -241,7 +244,7 @@ export const education: Education[] = [
     title: 'BSc Computer Science',
     school: 'Trent University, Oshawa',
     period: '2021 to 2023',
-    note: "Dean's Honor Roll",
+    note: "Dean's Honour Roll",
   },
   {
     title: 'Advanced Diploma, Computer Programming and Analysis',
