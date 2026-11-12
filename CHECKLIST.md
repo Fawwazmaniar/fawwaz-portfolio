@@ -8,11 +8,10 @@
 - [x] `public/og.png` text-only social card (regenerate with `npm run og`)
 
 ## Plateau (`projects[0]`)
-Stack, key decisions, trade-offs and "what I learned" now come from the repo's `package.json` and README.
+Stack, key decisions, trade-offs and next steps come from the repo's `package.json`, README and CI workflow (re-checked 12 Nov: it now has tests, CI and an atomic Finish).
 - [x] `liveUrl` and `repoUrl` set
 - [ ] Check the card `diagram` matches how Plateau is wired (React, Supabase, Postgres with Row Level Security)
 - [ ] `next`: has charts and personal records (from your first brief). Add more
-- [ ] Confirm "warm-up flags" in the summary: your description has it, the README doesn't mention it
 
 ## Aethr (`projects[1]`)
 Filled in from the details you pasted. Still needed:

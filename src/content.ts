@@ -164,8 +164,9 @@ export const projects: Project[] = [
       'Log every set with weight, reps and warm-up flags, and add notes per exercise.',
       'Review your full session history.',
       'All data access is enforced by Postgres Row Level Security.',
+      'Tests with Vitest and React Testing Library, run with lint, typecheck and the build in GitHub Actions on every push and pull request.',
     ],
-    // Matches the repo's package.json and README.
+    // Matches the repo's package.json, README and CI workflow.
     stack: [
       { name: 'React', role: 'UI components' },
       { name: 'TypeScript', role: 'Static typing' },
@@ -176,15 +177,21 @@ export const projects: Project[] = [
       { name: 'Supabase', role: 'Postgres database, Auth and Row Level Security' },
       { name: 'Radix UI', role: 'Accessible, unstyled dialog primitives for all modals' },
       { name: 'React Icons', role: 'Icons' },
+      { name: 'Vitest', role: 'Test runner, with the Supabase client mocked so tests never reach a real project' },
+      { name: 'React Testing Library', role: 'Component and screen tests' },
+      { name: 'GitHub Actions', role: 'CI: lint, typecheck, tests and build on every push and pull request' },
     ],
     keyDecisions: [
       "Server state lives in TanStack Query and app-controlled state in Zustand, so caching and UI state don't get tangled.",
       'Supabase Row Level Security enforces that users can only read and write their own data, so the client never decides ownership.',
-      'A workout is saved only when the user taps "Finish", so half-finished sessions never end up in history.',
+      'A workout is saved only when the user taps "Finish", in a single Postgres function call, so half-finished sessions never end up in history and a failed save rolls back cleanly.',
     ],
     tradeoffs:
-      'Multi-step writes are not yet wrapped in a transaction, exercise reordering is deferred, and it ships as a PWA rather than a native app.',
-    next: ['Track progress over time with charts, and highlight personal records.'], // TODO: add more
+      'Editing a saved workout is not atomic yet, exercises can be moved up and down but there is no drag and drop, and it is a web app rather than a native one.',
+    next: [
+      'Track progress over time with charts, and highlight personal records.',
+      'Make editing a saved workout atomic, like Finish already is.',
+    ],
     learned: [
       'Separating server state (React Query) from app-controlled state (Zustand), and enforcing data ownership in the database with Row Level Security instead of in client code.',
     ],
