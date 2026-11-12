@@ -7,18 +7,18 @@ import type { Education, Job, NavItem, Project, SkillGroup } from './types.ts'
 export const site = {
   // Used for the canonical link, Open Graph, sitemap and structured data.
   url: 'https://www.fawwazmaniar.dev',
-  title: 'Mohammed Fawwaz Maniar | Senior Full Stack Engineer, Frontend Specialist',
+  title: 'Mohammed Fawwaz Maniar | Senior Frontend Engineer',
   description:
-    'Senior full stack engineer and frontend specialist in Markham, Ontario. Eight-plus years of Angular and TypeScript, now building in React. Open to senior front-end and full-stack roles.',
+    'Senior frontend engineer in Markham, Ontario. 9 years of web development, deep in Angular and TypeScript, building in React. Open to senior front-end and full-stack roles.',
 }
 
 export const person = {
   name: 'Mohammed Fawwaz Maniar',
   brand: 'Fawwaz.',
-  jobTitle: 'Senior Full Stack Engineer · Frontend Specialist',
+  jobTitle: 'Senior Frontend Engineer',
   location: 'Markham, Ontario, Canada',
   email: 'fawwazmaniar@gmail.com',
-  // TODO: add your profile URLs. While empty, they render as "coming soon".
+  // An empty profile URL renders as "coming soon".
   github: 'https://github.com/Fawwazmaniar',
   linkedin: 'https://www.linkedin.com/in/fawwaz-maniar-899a2aa6/',
   resumeUrl: '/resume.pdf', // TODO: drop your PDF at public/resume.pdf
@@ -67,7 +67,7 @@ export const ticker = [
 ]
 
 export const about = [
-  'I am a senior full stack engineer and frontend specialist in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
+  'I am a senior frontend engineer in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
   'I take ownership of a feature from requirements through release and production support. I lead migrations from legacy applications to modern stacks, and I mentor junior and intermediate developers through code review. I care about readable, maintainable code and I write tests alongside it.',
   'I use GitHub Copilot and Claude every day for scaffolding, test generation, debugging, and code review. I review everything they produce, and I own what ships.',
 ]

@@ -17,7 +17,7 @@ export function Hero() {
     <section aria-labelledby="hero-title" className="lime-zone bg-lime text-ink">
       <div className={`${container} pb-14 pt-8 sm:pb-20`}>
         <p {...enter(0, -60)} className={`enter ${eyebrow}`}>
-          {person.jobTitle} / {person.location}
+          {person.jobTitle} · {person.location}
         </p>
 
         <div className="mt-8 grid items-end gap-10 xl:grid-cols-[1fr_auto]">
