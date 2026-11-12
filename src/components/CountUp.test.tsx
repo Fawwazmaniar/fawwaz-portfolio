@@ -1,10 +1,28 @@
-import { render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
 import { afterEach, vi } from 'vitest'
 import { CountUp } from './CountUp'
 
 afterEach(() => {
   vi.unstubAllGlobals()
 })
+
+/** Pretend the browser supports scroll observers and the user allows motion. */
+function stubMotionAllowed() {
+  let reveal = () => {}
+  vi.stubGlobal(
+    'IntersectionObserver',
+    class {
+      constructor(callback: (entries: { isIntersecting: boolean }[]) => void) {
+        reveal = () => callback([{ isIntersecting: true }])
+      }
+      observe() {}
+      disconnect() {}
+    },
+  )
+  vi.stubGlobal('matchMedia', () => ({ matches: false }))
+  vi.stubGlobal('requestAnimationFrame', () => 0) // freeze the animation at its first frame
+  return () => act(reveal)
+}
 
 describe('CountUp', () => {
   it('renders the formatted final value on first render', () => {
@@ -13,16 +31,27 @@ describe('CountUp', () => {
     expect(screen.getByText('13,000+')).toBeInTheDocument()
   })
 
-  it('keeps the real value in the DOM while the count-up is waiting to start', () => {
-    // Pretend the browser supports scroll observers and the user allows motion.
-    vi.stubGlobal('IntersectionObserver', class { observe() {} disconnect() {} })
-    vi.stubGlobal('matchMedia', () => ({ matches: false }))
+  it('has no stray zero in the page text before the count starts', () => {
+    stubMotionAllowed()
+    const { container } = render(<CountUp to={9} suffix="+" />)
+    // What a crawler reads: only the real value.
+    expect(container).toHaveTextContent(/^9\+$/)
+  })
 
+  it('counts up on an aria-hidden overlay while the real value stays in the DOM', () => {
+    const scrollIntoView = stubMotionAllowed()
     const { container } = render(<CountUp to={9} suffix="+" />)
 
-    // The real text is still there for crawlers and screen readers (only made transparent)...
-    expect(screen.getByText('9+')).toBeInTheDocument()
-    // ...and the visible overlay starts at zero, hidden from assistive tech.
+    scrollIntoView()
+
+    expect(screen.getByText('9+')).toBeInTheDocument() // real text is still there for screen readers
     expect(container.querySelector('[aria-hidden="true"]')).toHaveTextContent('0+')
+  })
+
+  it('does not animate for visitors who prefer reduced motion', () => {
+    stubMotionAllowed()
+    vi.stubGlobal('matchMedia', () => ({ matches: true }))
+    const { container } = render(<CountUp to={9} suffix="+" />)
+    expect(container).toHaveTextContent(/^9\+$/)
   })
 })
