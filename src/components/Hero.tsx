@@ -52,7 +52,9 @@ export function Hero() {
               <Link to="/#projects" className={button.primary}>
                 View projects <span aria-hidden="true">↗</span>
               </Link>
-              <a href={person.resumeUrl} download className={button.secondary}>Download resume</a>
+              <a href={person.resumeUrl} download={person.resumeFilename} className={button.secondary}>
+                Download resume
+              </a>
               <Link to="/#contact" className={button.secondary}>Contact</Link>
             </div>
             <p className="mt-8 font-serif text-3xl italic leading-tight sm:text-4xl">{hero.positioning}</p>
