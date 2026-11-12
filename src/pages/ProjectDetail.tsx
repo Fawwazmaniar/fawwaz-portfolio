@@ -61,34 +61,6 @@ export function ProjectDetail() {
       </header>
 
       <div className={`${container} py-16 sm:py-24`}>
-        <Reveal from="scale" className="mb-16">
-          <section aria-label="Screenshots">
-          {project.screenshots.length > 0 ? (
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {project.screenshots.map((shot) => (
-                <li key={shot.src}>
-                  {/* Grayscale + multiply over lime turns any screenshot into a palette duotone. */}
-                  <div className="isolate bg-lime">
-                    <img
-                      src={shot.src}
-                      alt={shot.alt}
-                      width={shot.width}
-                      height={shot.height}
-                      loading="lazy"
-                      className="h-auto w-full mix-blend-multiply grayscale"
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div className={`flex aspect-video items-center justify-center border-2 border-dashed border-muted text-muted ${eyebrow}`}>
-              Screenshots coming soon
-            </div>
-          )}
-          </section>
-        </Reveal>
-
         <DetailSection from="left" title="The problem" empty={!project.problem}>
           <p className="text-2xl leading-snug">{project.problem}</p>
         </DetailSection>
@@ -107,6 +79,18 @@ export function ProjectDetail() {
             ))}
           </dl>
         </DetailSection>
+
+        {project.keyDecisions && (
+          <DetailSection from="right" title="Key decisions" empty={false}>
+            <ul className={bullets}>{project.keyDecisions.map((line) => <li key={line}>{line}</li>)}</ul>
+          </DetailSection>
+        )}
+
+        {project.tradeoffs && (
+          <DetailSection from="left" title="Trade-offs" empty={false}>
+            <p className="text-lg leading-relaxed">{project.tradeoffs}</p>
+          </DetailSection>
+        )}
 
         <DetailSection from="right" title="What I would do next" empty={project.next.length === 0}>
           <ul className={bullets}>{project.next.map((line) => <li key={line}>{line}</li>)}</ul>

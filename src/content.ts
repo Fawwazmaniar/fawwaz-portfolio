@@ -7,21 +7,22 @@ import type { Education, Job, NavItem, Project, SkillGroup } from './types.ts'
 export const site = {
   // Used for the canonical link, Open Graph, sitemap and structured data.
   url: 'https://www.fawwazmaniar.dev',
-  title: 'Mohammed Fawwaz Maniar | Senior Full Stack Engineer, Frontend Specialist',
+  title: 'Mohammed Fawwaz Maniar | Senior Front End Developer',
   description:
-    'Senior full stack engineer and frontend specialist in Markham, Ontario. Eight-plus years of Angular and TypeScript, now building in React. Open to senior front-end and full-stack roles.',
+    'Senior front end developer in Markham, Ontario. 9 years of web development, deep in Angular and TypeScript, building in React. Open to senior front-end and full-stack roles.',
 }
 
 export const person = {
   name: 'Mohammed Fawwaz Maniar',
   brand: 'Fawwaz.',
-  jobTitle: 'Senior Full Stack Engineer · Frontend Specialist',
+  jobTitle: 'Senior Front End Developer',
   location: 'Markham, Ontario, Canada',
   email: 'fawwazmaniar@gmail.com',
-  // TODO: add your profile URLs. While empty, they render as "coming soon".
+  // An empty profile URL renders as "coming soon".
   github: 'https://github.com/Fawwazmaniar',
   linkedin: 'https://www.linkedin.com/in/fawwaz-maniar-899a2aa6/',
-  resumeUrl: '/resume.pdf', // TODO: drop your PDF at public/resume.pdf
+  resumeUrl: '/resume.pdf', // the file lives at public/resume.pdf
+  resumeFilename: 'Mohammed-Fawwaz-Maniar-Resume.pdf', // name the visitor's download gets
 }
 
 export const nav: NavItem[] = [
@@ -35,20 +36,18 @@ export const nav: NavItem[] = [
 
 export const hero = {
   status: 'Open to senior front-end and full-stack roles',
-  positioning: 'Senior front-end engineer. Angular and TypeScript depth, building in React.',
+  positioning: 'Senior front end developer. Angular and TypeScript depth, building in React.',
   intro:
-    'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 8+ years of experience, currently at Jonas Software.',
+    'I own features end to end, lead legacy-to-modern migrations, and mentor other developers. I have 9 years of experience, currently at Jonas Software.',
   facts: [
     { label: 'Depth', value: 'Angular and TypeScript' },
     { label: 'Building in', value: 'React and React Native' },
-    { label: 'Backend and data', value: 'C# and SQL' },
+    { label: 'Backend & Data', value: 'C# and SQL' },
   ],
-  // Facts from the experience section, not estimates.
   stats: [
-    { value: 8, suffix: '+', label: 'years of experience' },
-    { value: 5, suffix: '+', label: 'enterprise products' },
-    { value: 10000, suffix: '+', label: 'users served' },
-    { value: 3, suffix: '', label: 'legacy apps migrated' },
+    { value: 9, suffix: '+', label: 'Years of experience' },
+    { value: 13000, suffix: '+', label: 'Users on products I build' },
+    { value: 2, suffix: '', label: 'Apps built this year (Plateau, Aethr)' },
   ],
 }
 
@@ -69,88 +68,68 @@ export const ticker = [
 ]
 
 export const about = [
-  'I am a senior full stack engineer and frontend specialist in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
+  'I am a senior front end developer in Markham, Ontario. My depth is Angular and TypeScript, building data-heavy interfaces for enterprise business intelligence products. I am now building in React through personal projects, including a workout tracker called Plateau and a React Native marketplace app called Aethr.',
   'I take ownership of a feature from requirements through release and production support. I lead migrations from legacy applications to modern stacks, and I mentor junior and intermediate developers through code review. I care about readable, maintainable code and I write tests alongside it.',
   'I use GitHub Copilot and Claude every day for scaffolding, test generation, debugging, and code review. I review everything they produce, and I own what ships.',
 ]
 
+// Mirrors the skills section of the resume, in the same order and wording.
 export const skills: SkillGroup[] = [
   {
     title: 'Frontend',
     note: 'Angular is my professional depth. My React experience comes from personal projects.',
     items: [
+      'React (Hooks, React Router, React Native)',
       'TypeScript',
       'JavaScript (ES6+)',
-      'React (Hooks, React Router, React Hook Form)',
       'Angular (NgRx, RxJS, OnPush, lazy loading)',
       'HTML5',
       'CSS3',
-      'Bootstrap',
-      'Responsive and mobile-first design',
+      'Responsive design',
     ],
   },
   {
-    title: 'State and data fetching',
-    items: ['Zustand', 'TanStack Query (React Query)', 'NgRx', 'RxJS', 'REST API integration'],
+    title: 'State & Data',
+    items: ['Zustand', 'TanStack Query (React Query)', 'NgRx', 'RxJS', 'Supabase', 'REST API integration'],
   },
   {
-    title: 'Testing and delivery',
-    items: ['React Testing Library', 'Automated testing', 'CI/CD', 'GitHub Actions', 'Git', 'Code review'],
-  },
-  {
-    title: 'Backend and data',
-    items: ['Node.js', 'C# / .NET Core', 'RESTful APIs', 'SQL (authoring and optimization)', 'SQL Server', 'PostgreSQL'],
-  },
-  {
-    title: 'AI-assisted development',
+    title: 'Testing & Delivery',
     items: [
-      'GitHub Copilot',
-      'Claude (agentic workflows, code generation, test scaffolding, debugging, code review)',
+      'Vitest',
+      'React Testing Library',
+      'Unit and integration testing',
+      'CI/CD pipelines',
+      'GitHub Actions',
+      'Git',
+      'Code review',
+      'Agile/Scrum',
     ],
   },
   {
-    title: 'Ways of working',
-    items: ['Agile/Scrum', 'Requirements analysis', 'Cross-functional collaboration', 'Mentorship'],
+    title: 'Backend & Data',
+    items: ['Node.js', 'C# / .NET Core', 'RESTful APIs', 'SQL (authoring & optimization)', 'SQL Server', 'PostgreSQL'],
+  },
+  {
+    title: 'AI-Assisted Development',
+    note: 'Agentic workflows, test scaffolding, debugging, code review.',
+    items: ['Claude', 'GitHub Copilot'],
   },
 ]
 
-// The "~" figures are my own estimates. Edit or delete any `metric` freely.
 export const experience: Job[] = [
   {
-    role: 'Senior Front End Engineer',
+    role: 'Senior Front End Developer',
     company: 'Jonas Software',
     location: 'Markham, ON',
     period: 'Sept 2019 to present',
     bullets: [
-      {
-        text: 'Owned features end to end across 5+ enterprise business intelligence products serving 10,000+ users, from requirements and design through testing, release, and production support',
-      },
-      {
-        text: 'Led migration of 3 legacy applications to modern Angular with NgRx and OnPush change detection',
-        metric: '~40% faster load times',
-      },
-      {
-        text: 'Optimized SQL queries (SQL Server, PostgreSQL) behind reporting dashboards',
-        metric: '~50% faster average execution on millions of rows',
-      },
-      { text: 'Built data-heavy interfaces: dashboards and multi-step workflows over large datasets' },
-      {
-        text: 'Set testing and delivery standards: automated testing gates, Git branching strategy, CI/CD practices',
-        metric: '~35% fewer integration failures',
-      },
-      {
-        text: 'Mentored 4 junior and intermediate developers through code reviews focused on readability, testability, and maintainability',
-        metric: '~20% shorter review cycles',
-      },
-      {
-        text: 'Used GitHub Copilot and Claude daily for scaffolding, test generation, and debugging',
-        metric: '~30% less repetitive coding work',
-        suffix: 'with all AI-generated code reviewed and owned by me',
-      },
-      {
-        text: 'Partnered with product owners on requirements and technical risk; ran sprint planning and retrospectives for a team of 6',
-        metric: '~15% sprint velocity improvement over two years',
-      },
+      'Drove projects from technical planning to release across multiple enterprise business intelligence products used by 13,000+ users, including production support after launch.',
+      'Built data-rich interfaces for reporting and analytics, including dashboards and multi-step workflows over large datasets, turning complex data into screens people can act on.',
+      'Led migration of legacy applications to modern Angular with NgRx and OnPush change detection, improving load performance and the developer experience for the team.',
+      'Partnered as a technical peer with product owners, clarifying requirements, reworking technical specs, and flagging risks early so solutions matched what customers needed.',
+      'Made testing a team standard: automated testing gates, Git branching strategies, and CI/CD practices that catch integration issues early.',
+      'Use GitHub Copilot and Claude daily to scaffold components, generate tests, and debug, while reviewing and owning all AI-generated code.',
+      'Led Agile ceremonies (sprint planning, estimation, retrospectives) for the team, keeping delivery predictable and blockers visible.',
     ],
   },
   {
@@ -159,11 +138,9 @@ export const experience: Job[] = [
     location: 'Toronto, ON',
     period: 'Sept 2017 to Sept 2019',
     bullets: [
-      {
-        text: 'Drove an 80% increase in e-commerce revenue by working with marketing on SEO strategy and UI improvements across 6 global e-commerce websites',
-      },
-      { text: 'Built client management applications with TypeScript and Bootstrap, with cross-browser compatibility' },
-      { text: 'Maintained and optimized 6 production e-commerce sites, including PayPal payment integration' },
+      "Collaborated with marketing on SEO strategy and UI improvements across the company's global e-commerce websites.",
+      'Built client management applications with TypeScript and Bootstrap, ensuring cross-browser compatibility.',
+      'Maintained and optimized production e-commerce sites, ensuring high availability and seamless PayPal payment integration.',
     ],
   },
 ]
@@ -177,17 +154,7 @@ export const projects: Project[] = [
     summary:
       'Build your own training split, log every set with weight, reps and warm-up flags, add per-exercise notes, and review your full session history.',
     liveUrl: 'https://workout-tracker-zeta-neon.vercel.app',
-    repoUrl: '', // TODO: add the repo link
-    screenshots: [
-      {
-        src: '/screenshots/plateau-1.png',
-        alt: "Plateau's welcome screen: a dark card with the Plateau logo, the headline \"Train with intent\", and Create account and Log in buttons.",
-        width: 974,
-        height: 1006,
-      },
-      // TODO: add more screenshots, e.g. logging a set and session history
-    ],
-    // TODO: check this matches how Plateau is actually wired together.
+    repoUrl: 'https://github.com/Fawwazmaniar/workout-tracker',
     diagram: [
       { label: 'Client', nodes: ['React', 'TypeScript'] },
       { label: 'Backend', nodes: ['Supabase'] },
@@ -200,20 +167,37 @@ export const projects: Project[] = [
       'Log every set with weight, reps and warm-up flags, and add notes per exercise.',
       'Review your full session history.',
       'All data access is enforced by Postgres Row Level Security.',
-      'Write tests alongside each feature, so the project doubles as practice for my testing habits.',
+      'Tests with Vitest and React Testing Library, run with lint, typecheck and the build in GitHub Actions on every push and pull request.',
     ],
-    // TODO: the "role" text is my short description of each tool's job here. Rewrite it as your actual reasons for choosing it.
+    // Matches the repo's package.json, README and CI workflow.
     stack: [
       { name: 'React', role: 'UI components' },
-      { name: 'TypeScript', role: 'Typed models for workouts, sets and records' },
-      { name: 'Supabase', role: 'Backend and Postgres database, with Row Level Security enforcing all data access' },
-      { name: 'Zustand', role: 'Client-side state' },
-      { name: 'React Hook Form', role: 'Workout entry forms' },
-      { name: 'React Testing Library', role: 'Component tests written alongside features' },
-      { name: 'Vite', role: 'Dev server and build tooling' },
+      { name: 'TypeScript', role: 'Static typing' },
+      { name: 'Vite', role: 'Build tool and dev server' },
+      { name: 'React Router', role: 'Client-side routing' },
+      { name: 'Zustand', role: 'State the app controls: the auth session, current role and in-progress form selections' },
+      { name: 'TanStack Query', role: 'Server state, caching and mutations' },
+      { name: 'Supabase', role: 'Postgres database, Auth and Row Level Security' },
+      { name: 'Radix UI', role: 'Accessible, unstyled dialog primitives for all modals' },
+      { name: 'React Icons', role: 'Icons' },
+      { name: 'Vitest', role: 'Test runner, with the Supabase client mocked so tests never reach a real project' },
+      { name: 'React Testing Library', role: 'Component and screen tests' },
+      { name: 'GitHub Actions', role: 'CI: lint, typecheck, tests and build on every push and pull request' },
     ],
-    next: ['Track progress over time with charts, and highlight personal records.'], // TODO: add more
-    learned: ['Practising writing tests alongside features, rather than after them.'], // TODO: add more
+    keyDecisions: [
+      "Server state lives in TanStack Query and app-controlled state in Zustand, so caching and UI state don't get tangled.",
+      'Supabase Row Level Security enforces that users can only read and write their own data, so the client never decides ownership.',
+      'A workout is saved only when the user taps "Finish", in a single Postgres function call, so half-finished sessions never end up in history and a failed save rolls back cleanly.',
+    ],
+    tradeoffs:
+      'Editing a saved workout is not atomic yet, exercises can be moved up and down but there is no drag and drop, and it is a web app rather than a native one.',
+    next: [
+      'Track progress over time with charts, and highlight personal records.',
+      'Make editing a saved workout atomic, like Finish already is.',
+    ],
+    learned: [
+      'Separating server state (React Query) from app-controlled state (Zustand), and enforcing data ownership in the database with Row Level Security instead of in client code.',
+    ],
   },
   {
     slug: 'aethr',
@@ -224,15 +208,6 @@ export const projects: Project[] = [
       'Connects people with providers of tarot, astrology and similar practices. A consumer app for discovering and booking sessions, and a provider app for managing availability, bookings and client communication.',
     liveUrl: 'https://intotheaethr.com/',
     repoUrl: '', // TODO: add the repo link if it is public
-    screenshots: [
-      {
-        src: '/screenshots/aethr-1.png',
-        alt: 'Two phones showing the Aethr app\'s Your Appointments screen: a booking card for a tarot reader with a Go to link button, and a calendar of appointments.',
-        width: 814,
-        height: 798,
-      },
-      // TODO: add more screenshots, e.g. discovery, booking and the video session
-    ],
     // TODO: check this matches how Aethr is actually wired together.
     diagram: [
       { label: 'React Native', nodes: ['Consumer app', 'Provider app'] },
@@ -269,7 +244,7 @@ export const education: Education[] = [
     title: 'BSc Computer Science',
     school: 'Trent University, Oshawa',
     period: '2021 to 2023',
-    note: "Dean's Honor Roll",
+    note: "Dean's Honour Roll",
   },
   {
     title: 'Advanced Diploma, Computer Programming and Analysis',

@@ -17,7 +17,7 @@ export function Hero() {
     <section aria-labelledby="hero-title" className="lime-zone bg-lime text-ink">
       <div className={`${container} pb-14 pt-8 sm:pb-20`}>
         <p {...enter(0, -60)} className={`enter ${eyebrow}`}>
-          {person.jobTitle} / {person.location}
+          {person.jobTitle} · {person.location}
         </p>
 
         <div className="mt-8 grid items-end gap-10 xl:grid-cols-[1fr_auto]">
@@ -52,7 +52,9 @@ export function Hero() {
               <Link to="/#projects" className={button.primary}>
                 View projects <span aria-hidden="true">↗</span>
               </Link>
-              <a href={person.resumeUrl} download className={button.secondary}>Download resume</a>
+              <a href={person.resumeUrl} download={person.resumeFilename} className={button.secondary}>
+                Download resume
+              </a>
               <Link to="/#contact" className={button.secondary}>Contact</Link>
             </div>
             <p className="mt-8 font-serif text-3xl italic leading-tight sm:text-4xl">{hero.positioning}</p>

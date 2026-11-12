@@ -1,22 +1,7 @@
 import { experience } from '../content'
-import type { Bullet } from '../types'
 import { Reveal } from './Reveal'
 import { Section } from './Section'
 import { eyebrow } from './ui'
-
-function BulletText({ text, metric, suffix }: Bullet) {
-  return (
-    <>
-      {text}
-      {metric && (
-        <>
-          , <strong className="box-decoration-clone bg-lime px-1 font-semibold text-ink">{metric}</strong>
-        </>
-      )}
-      {suffix && `, ${suffix}`}.
-    </>
-  )
-}
 
 export function Experience() {
   return (
@@ -33,11 +18,9 @@ export function Experience() {
             </Reveal>
             <ul className="list-disc space-y-4 pl-5 text-lg leading-relaxed marker:text-fg">
               {job.bullets.map((bullet, i) => (
-                <li key={bullet.text}>
+                <li key={bullet}>
                   {/* Bullets alternate sides so the list weaves in. */}
-                  <Reveal from={i % 2 ? 'left' : 'right'}>
-                    <BulletText {...bullet} />
-                  </Reveal>
+                  <Reveal from={i % 2 ? 'left' : 'right'}>{bullet}</Reveal>
                 </li>
               ))}
             </ul>

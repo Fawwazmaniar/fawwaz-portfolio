@@ -7,6 +7,7 @@ React + TypeScript + Vite + Tailwind CSS v4. Static site, deployable to Vercel.
 ```bash
 npm install
 npm run dev          # http://localhost:5173
+npm run lint         # ESLint
 npm test             # unit/component tests (Vitest + React Testing Library)
 npm run test:e2e     # Playwright smoke test (first run: npx playwright install chromium)
 npm run build        # type-check + production build into dist/
@@ -18,15 +19,15 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 
 - **Social links, domain, resume:** `person.github`, `person.linkedin`, `site.url`, and drop your PDF at `public/resume.pdf`.
 - **Empty means "coming soon":** an empty string or empty array renders a visible placeholder instead of a fake value.
-- **Metrics:** each experience bullet has an optional `metric` (the "~" figures). Edit or delete it in place.
+- **Numbers:** every figure on the site (the hero counters, "13,000+ users") is real and lives in `content.ts`. Don't add estimates.
+- **Social card:** `public/og.png` is a text-only 1200×630 image used only in link previews (LinkedIn, Slack, X). Regenerate it with `npm run og` after changing your name, title or colours.
 - **SEO:** the title, description, canonical URL, JSON-LD, `sitemap.xml` and `robots.txt` are generated from `content.ts` at build time (see `seo()` in `vite.config.ts`).
 
 ## Adding a project
 
 1. Add an object to the `projects` array in `src/content.ts` (copy `plateau`). The `slug` becomes the URL: `/projects/<slug>`.
-2. Put screenshots in `public/screenshots/` and list them: `{ src: '/screenshots/foo.png', alt: 'What the image shows', width: 1200, height: 800 }`.
-3. Describe the architecture as left-to-right stages: `diagram: [{ label: 'Client', nodes: ['React'] }, ...]`. Leave it empty to show "Diagram coming soon".
-4. That's it. The card, detail page and sitemap entry are generated.
+2. Describe the architecture as left-to-right stages: `diagram: [{ label: 'Client', nodes: ['React'] }, ...]`. Leave it empty to show "Diagram coming soon".
+3. That's it. The card, detail page and sitemap entry are generated.
 
 ## Deploying to Vercel
 
@@ -43,4 +44,4 @@ Everything lives in [src/content.ts](src/content.ts); components only render it.
 - **Type:** Inter (variable, weight up to 900) and Instrument Serif italic, both self-hosted via Fontsource.
 - **Motion:** hero fade-up, scroll reveals, count-up stats, a scrolling tech ticker (with a pause button), and a scroll progress bar. No animation library. All of it is off under `prefers-reduced-motion`.
 - **Why Tailwind:** styling stays next to the markup, and unused CSS is dropped (about 6 kB gzipped here).
-- **Project cards:** each card shows an architecture diagram (`diagram` in `content.ts`) on a lime panel. Screenshots live on the detail pages, recolored to a green duotone with CSS so any screenshot fits the palette.
+- **Project cards:** each card shows an architecture diagram (`diagram` in `content.ts`) on a lime panel. The site deliberately has no screenshots or photos; it stays text and type.
