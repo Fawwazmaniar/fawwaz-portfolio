@@ -10,7 +10,7 @@ export function useActiveSection(ids: string[], enabled: boolean) {
       (entries) => {
         for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id)
       },
-      { rootMargin: '-45% 0px -50% 0px' },
+      { rootMargin: '-45% 0px -51% 0px' },
     )
     for (const id of ids) {
       const el = document.getElementById(id)

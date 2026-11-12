@@ -57,5 +57,13 @@ test('counters show real values with reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/')
   const counters = page.getByRole('region', { name: 'At a glance' }).locator('dd')
-  await expect(counters).toHaveText(['9+', '13,000+', '2'])
+  await expect(counters).toHaveText(['9+', '13,000+', '3'])
+})
+
+// The HTML the server sends (before any JavaScript runs) is what crawlers and no-JS visitors see.
+test('the raw HTML contains the real hero numbers', async ({ request }) => {
+  const html = await (await request.get('/')).text()
+  for (const text of ['9+ Years of experience', '13,000+ Users on products I build', '3 Legacy apps modernized']) {
+    expect(html).toContain(text)
+  }
 })
