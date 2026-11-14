@@ -63,7 +63,7 @@ test('counters show real values with reduced motion', async ({ page }) => {
 // The HTML the server sends (before any JavaScript runs) is what crawlers and no-JS visitors see.
 test('the raw HTML contains the real hero numbers', async ({ request }) => {
   const html = await (await request.get('/')).text()
-  for (const text of ['9+ Years of experience', '13,000+ Users on products I build', '3 Legacy apps modernized']) {
+  for (const text of ['9+ Years in software', '13,000+ Users on products I build', '3 Legacy apps modernized']) {
     expect(html).toContain(text)
   }
 })

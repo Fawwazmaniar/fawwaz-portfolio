@@ -1,6 +1,7 @@
 import { experience } from '../content'
 import { Reveal } from './Reveal'
 import { Section } from './Section'
+import { chip } from './Skills'
 import { eyebrow } from './ui'
 
 export function Experience() {
@@ -15,6 +16,13 @@ export function Experience() {
               <p className="mt-3 text-lg font-medium">{job.company}</p>
               <p className="text-muted">{job.location}</p>
               <p className={`mt-4 inline-block border border-rule px-3 py-1.5 ${eyebrow}`}>{job.period}</p>
+              {job.tags && (
+                <ul aria-label="Technologies" className="mt-4 flex flex-wrap gap-2">
+                  {job.tags.map((tag) => (
+                    <li key={tag} className={chip}>{tag}</li>
+                  ))}
+                </ul>
+              )}
             </Reveal>
             <ul className="list-disc space-y-4 pl-5 text-lg leading-relaxed marker:text-fg">
               {job.bullets.map((bullet, i) => (
