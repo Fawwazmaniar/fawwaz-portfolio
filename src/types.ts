@@ -10,6 +10,8 @@ export interface Job {
   company: string
   location: string
   period: string
+  /** Optional tech tags shown under the role. */
+  tags?: string[]
   bullets: string[]
 }
 
