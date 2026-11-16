@@ -114,7 +114,7 @@ export const experience: Job[] = [
     bullets: [
       'Build and ship production features in React and TypeScript for enterprise business intelligence products used by 13,000+ users, owning components, state management, and performance.',
       'Support 4 teams, each building a different enterprise business intelligence product, driving work from technical planning to release and production support for 13,000+ users.',
-      'Lead legacy-to-modern migrations (3 applications to date), including a vanilla JavaScript business intelligence app rebuilt as a component-based TypeScript single-page app with centralized state management, and a client portal moved off legacy ASP.NET MVC 5.',
+      'Lead legacy-to-modern migrations (3 applications to date), including a vanilla JavaScript business intelligence app rebuilt as a component-based React TypeScript single-page app with centralized state management, and a client portal moved off legacy ASP.NET MVC 5.',
       'Cut client portal wait times by modernizing data flows: ~85% faster work-order refresh, ~70% faster invoice inquiries (300 per-row checks collapsed into one paged call), and ~75% faster page navigation.',
       'Move emails and retries to background processing, making work-order creation ~50% faster, and speed up report generation by ~30%.',
       'Build data-rich reporting and analytics interfaces, including dashboards and multi-step workflows over large datasets.',
